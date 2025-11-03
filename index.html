@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-inner">
       <h1>Welcome to My Page</h1>
       <nav>
         <a href="#about">About</a>
@@ -18,49 +18,57 @@
     </div>
   </header>
 
-    <main class="container">
-    <section>
-      <h2>Пости з JSONPlaceholder</h2>
-      <div id="cards"></div>
-      <button class="btn" data-animate data-target="h2">Пульс заголовка</button>
-    </section>
-  </main>
+<section id="posts" class="container">
+  <h2 id="posts-title">Пости з JSONPlaceholder</h2>
+  <div class="actions">
+    <button class="btn" data-animate data-target="#posts-title">Пульс заголовка</button>
+  </div>
+  <div id="cards"></div>
+</section>
 
-  <div id="modal">
-    <div class="modal-box">
-      <button id="modal-close" class="btn" style="float:right">×</button>
-      <h3>Модальне вікно</h3>
-      <p>Тут може бути будь-який контент.</p>
+<section id="hero">
+  <div class="container">
+    <h2>Clean & Simple Landing Template</h2>
+    <p>This is a lightweight HTML/CSS template built for TypeScript practice.</p>
+    <button class="btn" data-open-modal>Open Modal</button>
+  </div>
+</section>
+
+<section id="about" class="container">
+  <h2>About</h2>
+  <p>This project demonstrates how to integrate TypeScript with a static HTML/CSS site. It includes dynamic animations, modular JavaScript compiled from TypeScript, and data loading from APIs. The goal is to show how even a simple landing page can become interactive and maintainable.</p>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Portfolio Builder</h3>
+        <p>A responsive, TypeScript-powered portfolio layout with smooth animations and modular code.</p>
+      </div>
+      <div class="project-card">
+        <h3>API Dashboard</h3>
+        <p>Dashboard app that fetches data from REST APIs and displays it with charts and cards.</p>
+      </div>
+      <div class="project-card">
+        <h3>Interactive Form</h3>
+        <p>Dynamic contact form with TypeScript validation and real-time feedback on input fields.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <section id="hero">
-    <div class="container">
-      <h2>Clean & Simple Landing Template</h2>
-      <p>This is a lightweight HTML/CSS template built for TypeScript practice.</p>
-      <button class="btn" data-open-modal>Open Modal</button>
-    </div>
-  </section>
+<section id="contact" class="container">
+  <h2>Contact</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+  </form>
+</section>
 
-  <section id="about" class="container">
-    <h2>About</h2>
-    <p>This project demonstrates integration of TypeScript with a static site, including animations and API fetching.</p>
-  </section>
-
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div id="cards"></div>
-  </section>
-
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </section>
 
   <footer>
     <p>© 2025 My Landing Page. All rights reserved.</p>
@@ -68,13 +76,12 @@
 
   <div id="modal">
     <div class="modal-box">
-      <button id="modal-close" class="btn">×</button>
-      <h3>Hello!</h3>
-      <p>This is a demo modal window.</p>
+      <button id="modal-close" class="btn btn-icon" aria-label="Close">×</button>
+      <h3>Модальне вікно</h3>
+      <p>Тут може бути будь-який контент.</p>
     </div>
   </div>
 
-  <!-- TypeScript output (добавим позже) -->
   <script type="module" src="public/js/main.js"></script>
 </body>
 </html>
