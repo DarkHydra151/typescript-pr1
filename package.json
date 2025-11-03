@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,8 +18,8 @@
     "url": "https://github.com/DarkHydra151/typescript-pr1/issues"
   },
   "homepage": "https://github.com/DarkHydra151/typescript-pr1#readme",
-  "description": "",
+  "description": "Цей репозиторій розроблено для демонстрації роботи з TypeScript.\r Він включає простий код із застосуванням базових типів даних (string, number, boolean)\r та містить налаштування для компіляції TypeScript у JavaScript.",
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
