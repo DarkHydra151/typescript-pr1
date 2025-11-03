@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-inner">
       <h1>Welcome to My Page</h1>
       <nav>
         <a href="#about">About</a>
@@ -18,21 +18,13 @@
     </div>
   </header>
 
-    <main class="container">
-    <section>
-      <h2>Пости з JSONPlaceholder</h2>
-      <div id="cards"></div>
-      <button class="btn" data-animate data-target="h2">Пульс заголовка</button>
-    </section>
-  </main>
-
-  <div id="modal">
-    <div class="modal-box">
-      <button id="modal-close" class="btn" style="float:right">×</button>
-      <h3>Модальне вікно</h3>
-      <p>Тут може бути будь-який контент.</p>
+  <section id="posts" class="container">
+    <h2 id="posts-title">Пости з JSONPlaceholder</h2>
+    <div class="actions">
+      <button class="btn" data-animate data-target="#posts-title">Пульс заголовка</button>
     </div>
-  </div>
+    <div id="cards"></div>
+  </section>
 
   <section id="hero">
     <div class="container">
@@ -44,12 +36,30 @@
 
   <section id="about" class="container">
     <h2>About</h2>
-    <p>This project demonstrates integration of TypeScript with a static site, including animations and API fetching.</p>
+    <p>
+      This project demonstrates integration of TypeScript with a static site:
+      modal windows, scroll effects, animations and API fetching.
+    </p>
   </section>
 
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div id="cards"></div>
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Portfolio Builder</h3>
+          <p>Responsive, TypeScript-ready portfolio layout with smooth animations.</p>
+        </div>
+        <div class="project-card">
+          <h3>API Dashboard</h3>
+          <p>Fetch REST data and render cards & charts on a clean UI.</p>
+        </div>
+        <div class="project-card">
+          <h3>Interactive Form</h3>
+          <p>Client-side validation with typed helpers and friendly UX.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="container">
@@ -68,13 +78,12 @@
 
   <div id="modal">
     <div class="modal-box">
-      <button id="modal-close" class="btn">×</button>
-      <h3>Hello!</h3>
-      <p>This is a demo modal window.</p>
+      <button id="modal-close" class="btn btn-icon" aria-label="Close">×</button>
+      <h3>Модальне вікно</h3>
+      <p>Тут може бути будь-який контент.</p>
     </div>
   </div>
 
-  <!-- TypeScript output (добавим позже) -->
   <script type="module" src="public/js/main.js"></script>
 </body>
 </html>
